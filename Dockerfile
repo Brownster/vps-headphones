@@ -21,3 +21,5 @@ EXPOSE 8181
 # Copy the supervisord configuration files into the container
 COPY headphones.conf /etc/supervisor/conf.d/headphones.conf
 RUN echo "user=$username" >> /etc/supervisor/conf.d/headphones.conf
+
+ENTRYPOINT ["python", "headphones/headphones.py"]
